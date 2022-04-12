@@ -1,3 +1,7 @@
-.keyboard-inputs {
+/* .keyboard-inputs {
     float: left;
+} */
+
+.letters {
+    display: inline
 }
