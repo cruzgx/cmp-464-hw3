@@ -6,7 +6,7 @@ import Keyboard from './components/Keyboard';
 function App() {
   return (
     <div className="App">
-      <h1>Wordle Jr</h1>
+      <h1 className="wordle-heading">Wordle</h1>
       <Wordle />
       <br/>
       <Keyboard />
