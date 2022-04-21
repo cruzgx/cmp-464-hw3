@@ -13,31 +13,35 @@ class Keyboard extends Component {
     }
     
     handleLetterClick = (e) => {
-        console.log("You've pressed me")
+        const MAX_WORD_GUESS_SIZE = 5
 
         //the following will get the letter from the button you pressed.
-        console.log(e.currentTarget.textContent + "TEST")
-        
-        const userLetterPress = e.currentTarget.textContent
+
+        console.log(e.currentTarget.textContent.replace(/\s/g, ""))
+        const userLetterPress = e.currentTarget.textContent.replace(/\s/g, "") 
 
         //update state to reflect user letter press
-        this.setState({
-            wordleGuess: this.state.wordleGuess + userLetterPress
-        })
+
+        if(this.state.wordleGuess.length < MAX_WORD_GUESS_SIZE) {
+            this.setState({
+                wordleGuess: this.state.wordleGuess + userLetterPress
+            })
+        }
     }
 
     delButtonClick = () => {
         //delete logic goes here
-        //alert('delete button has been pressed!')
         
         console.log('Current val of state: ' + this.state.wordleGuess)
         let out = 'Dog'
         out = out.substring(0, out.length - 1);
         console.log('Expected output: ' + out)
+        console.log('Length of State(string): ' + this.state.wordleGuess.length)
+        //console.log('Expected Updated State: ' + this.state.wordleGuess.slice(0, -1))
 
 
-        if(!this.state.wordleGuess === '') {
-            this.setState({ //Bug possibly here since words get inputed as such: W O R D
+        if(this.state.wordleGuess.length > 0) {
+            this.setState({ 
                 wordleGuess: this.state.wordleGuess.slice(0, -1)
             })
         } 
@@ -76,9 +80,7 @@ class Keyboard extends Component {
                 }
             }
         )
-         
 
-        console.log(keyboardButtons)
 
         return(
             <div className="keyboard-inputs">
