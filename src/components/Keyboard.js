@@ -1,4 +1,3 @@
-import { keyboard } from '@testing-library/user-event/dist/keyboard'
 import React, {Component} from 'react'
 import '../css/Keyboard.css'
 
@@ -73,7 +72,7 @@ class Keyboard extends Component {
                    
                 } else if (i === DelLoc) { // Creates a tag for the DELETE button
                     return <p className="letters" onClick={this.delButtonClick}>Delete</p>
-                } else if(i == EnterLoc) { // Creates a tag for the ENTER button 
+                } else if(i === EnterLoc) { // Creates a tag for the ENTER button 
                     return <p className="letters" onClick={this.handleEnter}>Enter</p>
                 } else {
                    return <p className="letters" onClick={this.handleLetterClick}>{letter} </p>  
@@ -84,7 +83,10 @@ class Keyboard extends Component {
 
         return(
             <div className="keyboard-inputs">
-                {keyboardButtons}
+                <div className="keyboard-container">
+                    {keyboardButtons}
+                </div>
+                
 
                 <h1>The following is your current guess!</h1>
                 <p>{this.state.wordleGuess}</p>

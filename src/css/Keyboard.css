@@ -10,3 +10,9 @@
     /* border-radius: 25px; */
     border: 2px solid #73AD21;
 }
+
+/* .keyboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 2;
+} */

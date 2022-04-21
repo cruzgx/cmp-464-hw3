@@ -1,6 +1,10 @@
 import React, { Component } from "react";
+import '../css/Wordle.css'
 
 class Wordle extends Component {
+
+    //it might be a good idea to rename the component!
+
     constructor(props) {
         super(props);
     }
@@ -9,13 +13,13 @@ class Wordle extends Component {
     render() {
         return (
             //this table could be component itself
-            <table>
-                <tr><td>Guess</td></tr>
-                <tr><td>Guess</td></tr>
-                <tr><td>Guess</td></tr>
-                <tr><td>Guess</td></tr>
-                <tr><td>Guess</td></tr>
-            </table>
+            <div className="letter-container">
+                <p className="box-item"></p>
+                <p className="box-item"></p>
+                <p className="box-item"></p>
+                <p className="box-item"></p>
+                <p className="box-item"></p>
+            </div>
         )
 
     }
