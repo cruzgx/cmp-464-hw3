@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import '../css/Wordle.css'
+import BoxItem from "./BoxItem";
+
 
 class Wordle extends Component {
 
@@ -13,12 +15,23 @@ class Wordle extends Component {
     render() {
         return (
             //this table could be component itself
-            <div className="letter-container">
-                <p className="box-item"></p>
-                <p className="box-item"></p>
-                <p className="box-item"></p>
-                <p className="box-item"></p>
-                <p className="box-item"></p>
+            
+            // <div className="letter-container">
+            //     <BoxItem />
+            //     <BoxItem />
+            //     <BoxItem />
+            //     <BoxItem />
+            //     <BoxItem />
+            //     <BoxItem />
+            // </div>
+
+            <div className="wordle-row-container">
+                <BoxItem />
+                <BoxItem />
+                <BoxItem />
+                <BoxItem />
+                <BoxItem />
+                <BoxItem />
             </div>
         )
 

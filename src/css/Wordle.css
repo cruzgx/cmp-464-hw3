@@ -1,9 +1,18 @@
 /* the file should renamed...  */
 
-.letter-container {
-    display: flex;
+/* .letter-container {
+     display: flex;
     justify-content: center;
     font-family: Georgia, Times, 'Times New Roman', serif;
+} */
+
+.wordle-row-container {
+   font-family: Helvetica, sans-serif;
+}
+
+.wordle-row {
+    display: flex;
+    justify-content: center;
 }
 
 .box-item {

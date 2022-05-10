@@ -8,11 +8,6 @@ function App() {
     <div className="App">
       <h1 className="wordle-heading">Wordle</h1>
       <Wordle />
-      <Wordle />
-      <Wordle />
-      <Wordle />
-      <Wordle />
-      <Wordle />
       <br/>
       <Keyboard />
     </div>
