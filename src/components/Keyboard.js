@@ -32,9 +32,6 @@ class Keyboard extends Component {
         //delete logic goes here
         
         console.log('Current val of state: ' + this.state.wordleGuess)
-        let out = 'Dog'
-        out = out.substring(0, out.length - 1);
-        console.log('Expected output: ' + out)
         console.log('Length of State(string): ' + this.state.wordleGuess.length)
         //console.log('Expected Updated State: ' + this.state.wordleGuess.slice(0, -1))
 
@@ -45,11 +42,22 @@ class Keyboard extends Component {
             })
         } 
 
-        console.log('New val of state ' + this.state.wordleGuess)
+        //console.log('New val of state ' + this.state.wordleGuess)
     }
 
     handleEnter = () => {
-        alert("You've sucessefuly pressed the ENTER button")
+        const VALID_WORD_SIZE = 5 
+
+        if(this.state.wordleGuess.length < VALID_WORD_SIZE) {
+            alert("Too short of a word length guess!\n\nTry again!")
+            return
+        }
+        
+        console.log("You've sucessefuly pressed the ENTER button")
+        console.log("Attempting to lift this state up....")
+
+
+        this.props.getGuess(this.state.wordleGuess)
     }
 
     render() {
@@ -87,9 +95,11 @@ class Keyboard extends Component {
                     {keyboardButtons}
                 </div>
                 
-
-                <h1>The following is your current guess!</h1>
-                <p>{this.state.wordleGuess}</p>
+                <div className='curState'>
+                    <h1>The following is your current guess!</h1>
+                    <h2><i><b>{this.state.wordleGuess}</b></i></h2>
+                </div>
+                
             </div>
         )
     }

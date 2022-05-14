@@ -3,6 +3,7 @@
 } */
 
 .letters {
+    
     display: inline;
     width:200px;
     height:100px;
@@ -10,9 +11,16 @@
     /* border-radius: 25px; */
     border: 2px solid #73AD21;
 }
-
-/* .keyboard-container {
+/* 
+.keyboard-container {
     display: flex;
+    
+    justify-content: center;
+    
     flex-wrap: wrap;
-    flex-shrink: 2;
+    flex-shrink: 2; 
 } */
+
+.curState {
+    text-align: center;
+}
