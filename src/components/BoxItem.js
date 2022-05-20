@@ -29,10 +29,10 @@ class BoxItem extends Component {
                 {/* {this.isWordValid ? <p>{this.props.curGuess.charAt(0)}</p> : null} */}
                 
                 {this.isWordValid ? <p className="box-item">{this.props.curGuess}</p> : <p className="box-item">B</p>}
-                <p className="box-item">O</p>
                 <p className="box-item">X</p>
-                <p className="box-item">E</p>
-                <p className="box-item">R</p>
+                <p className="box-item">X</p>
+                <p className="box-item">X</p>
+                <p className="box-item">X</p>
             </div>
             
         )
